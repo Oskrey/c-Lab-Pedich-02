@@ -45,6 +45,7 @@ namespace Lab01
             this.buttonAdd = new System.Windows.Forms.Button();
             this.pictureBoxDraw = new System.Windows.Forms.PictureBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRadius)).BeginInit();
@@ -54,6 +55,7 @@ namespace Lab01
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.trackBar1);
             this.panelMenu.Controls.Add(this.buttonColour);
             this.panelMenu.Controls.Add(this.label3);
@@ -231,6 +233,15 @@ namespace Lab01
             this.pictureBoxDraw.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBoxDraw.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(661, 69);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FormLab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -270,6 +281,7 @@ namespace Lab01
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

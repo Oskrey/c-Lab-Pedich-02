@@ -34,6 +34,7 @@ namespace Lab01
             for(int i = list.Count - 1; i >= 0; i--)
             {
                 Figure fig = list[i];
+                
                 fig.selected |= fig.test(e.X, e.Y);
                 if   (fig.selected == true) break;
             }
@@ -98,7 +99,7 @@ namespace Lab01
             {
                 case "Круг": return new Circle();
                 case "Квадрат": return new Rectangle();
-                case "Треугольник": return new Triangle();
+                case "Треугольник":  return new Triangle();
             }
             return null;
         }
@@ -192,15 +193,7 @@ namespace Lab01
             }
         }
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-            foreach (Figure fig in list)
-            {
-                if (fig.selected == false) continue;
-                fig.angle = trackBar1.Value;
-            }
-            pictureBoxDraw.Invalidate();
-        }
+       
 
         private void trackBarThickness_ValueChanged(object sender, EventArgs e)
         {

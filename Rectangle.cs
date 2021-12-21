@@ -33,11 +33,11 @@ namespace Lab01
             Pen p = new Pen(color, thickness);
             g.DrawRectangle(p, x0, y0, size, size);
         }
+
         public override void Set(float sz)
         {
             size = sz;
             half_side = sz * 0.5f;
         }
-
     }
 }

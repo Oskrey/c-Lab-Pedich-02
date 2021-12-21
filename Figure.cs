@@ -15,7 +15,6 @@ namespace Lab01
         public Color color = Color.Black;
         public bool colTrue;
         public bool selected;
-        public float angle;
 
         virtual public bool test(float x, float y)
         {
@@ -30,5 +29,6 @@ namespace Lab01
         {
 
         }
+
     }
 }

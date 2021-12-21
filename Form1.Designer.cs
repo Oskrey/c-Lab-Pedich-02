@@ -30,7 +30,7 @@ namespace Lab01
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonColour = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,9 +45,7 @@ namespace Lab01
             this.buttonAdd = new System.Windows.Forms.Button();
             this.pictureBoxDraw = new System.Windows.Forms.PictureBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRadius)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarThickness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDraw)).BeginInit();
@@ -56,7 +54,6 @@ namespace Lab01
             // panelMenu
             // 
             this.panelMenu.Controls.Add(this.button1);
-            this.panelMenu.Controls.Add(this.trackBar1);
             this.panelMenu.Controls.Add(this.buttonColour);
             this.panelMenu.Controls.Add(this.label3);
             this.panelMenu.Controls.Add(this.label4);
@@ -71,30 +68,26 @@ namespace Lab01
             this.panelMenu.Controls.Add(this.buttonAdd);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1067, 113);
+            this.panelMenu.Size = new System.Drawing.Size(800, 92);
             this.panelMenu.TabIndex = 0;
             // 
-            // trackBar1
+            // button1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(329, 58);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.trackBar1.Maximum = 900;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(233, 56);
-            this.trackBar1.SmallChange = 5;
-            this.trackBar1.TabIndex = 8;
-            this.trackBar1.TickFrequency = 5;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.button1.Location = new System.Drawing.Point(496, 56);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 19);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // buttonColour
             // 
             this.buttonColour.BackColor = System.Drawing.Color.Black;
-            this.buttonColour.Location = new System.Drawing.Point(16, 36);
-            this.buttonColour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonColour.Location = new System.Drawing.Point(12, 29);
             this.buttonColour.Name = "buttonColour";
-            this.buttonColour.Size = new System.Drawing.Size(79, 69);
+            this.buttonColour.Size = new System.Drawing.Size(59, 56);
             this.buttonColour.TabIndex = 7;
             this.buttonColour.UseVisualStyleBackColor = false;
             this.buttonColour.Click += new System.EventHandler(this.buttonColour_Click);
@@ -102,41 +95,37 @@ namespace Lab01
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(849, 76);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(637, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 17);
+            this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "(колёсико)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 16);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(7, 13);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 17);
+            this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Перекрасить";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(153, 76);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(115, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 17);
+            this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "(ctrl + колёсико)";
             // 
             // trackBarRadius
             // 
-            this.trackBarRadius.Location = new System.Drawing.Point(828, 37);
-            this.trackBarRadius.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarRadius.Location = new System.Drawing.Point(621, 30);
             this.trackBarRadius.Maximum = 1000;
             this.trackBarRadius.Minimum = 50;
             this.trackBarRadius.Name = "trackBarRadius";
-            this.trackBarRadius.Size = new System.Drawing.Size(139, 56);
+            this.trackBarRadius.Size = new System.Drawing.Size(104, 45);
             this.trackBarRadius.TabIndex = 5;
             this.trackBarRadius.Value = 50;
             this.trackBarRadius.Scroll += new System.EventHandler(this.trackBarRadius_Scroll);
@@ -144,11 +133,10 @@ namespace Lab01
             // 
             // trackBarThickness
             // 
-            this.trackBarThickness.Location = new System.Drawing.Point(116, 37);
-            this.trackBarThickness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBarThickness.Location = new System.Drawing.Point(87, 30);
             this.trackBarThickness.Maximum = 20;
             this.trackBarThickness.Name = "trackBarThickness";
-            this.trackBarThickness.Size = new System.Drawing.Size(205, 56);
+            this.trackBarThickness.Size = new System.Drawing.Size(154, 45);
             this.trackBarThickness.TabIndex = 4;
             this.trackBarThickness.Scroll += new System.EventHandler(this.trackBarThickness_Scroll);
             this.trackBarThickness.ValueChanged += new System.EventHandler(this.trackBarThickness_ValueChanged);
@@ -156,30 +144,27 @@ namespace Lab01
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(849, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(637, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 17);
+            this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Выбор радиуса";
             // 
             // labelThickness
             // 
             this.labelThickness.AutoSize = true;
-            this.labelThickness.Location = new System.Drawing.Point(153, 17);
-            this.labelThickness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelThickness.Location = new System.Drawing.Point(115, 14);
             this.labelThickness.Name = "labelThickness";
-            this.labelThickness.Size = new System.Drawing.Size(115, 17);
+            this.labelThickness.Size = new System.Drawing.Size(88, 13);
             this.labelThickness.TabIndex = 2;
             this.labelThickness.Text = "Выбор толшины";
             // 
             // labelFigure
             // 
             this.labelFigure.AutoSize = true;
-            this.labelFigure.Location = new System.Drawing.Point(323, 22);
-            this.labelFigure.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFigure.Location = new System.Drawing.Point(242, 18);
             this.labelFigure.Name = "labelFigure";
-            this.labelFigure.Size = new System.Drawing.Size(108, 17);
+            this.labelFigure.Size = new System.Drawing.Size(84, 13);
             this.labelFigure.TabIndex = 2;
             this.labelFigure.Text = "Выбор фигуры:";
             // 
@@ -190,19 +175,17 @@ namespace Lab01
             "Круг",
             "Квадрат",
             "Треугольник"});
-            this.comboBoxFigure.Location = new System.Drawing.Point(439, 17);
-            this.comboBoxFigure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxFigure.Location = new System.Drawing.Point(329, 14);
             this.comboBoxFigure.Name = "comboBoxFigure";
-            this.comboBoxFigure.Size = new System.Drawing.Size(160, 24);
+            this.comboBoxFigure.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFigure.TabIndex = 1;
             this.comboBoxFigure.Text = "Круг";
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(715, 16);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDelete.Location = new System.Drawing.Point(536, 13);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(100, 28);
+            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
             this.buttonDelete.TabIndex = 0;
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -210,10 +193,9 @@ namespace Lab01
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(607, 16);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAdd.Location = new System.Drawing.Point(455, 13);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(100, 28);
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -223,39 +205,27 @@ namespace Lab01
             // 
             this.pictureBoxDraw.BackColor = System.Drawing.Color.White;
             this.pictureBoxDraw.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxDraw.Location = new System.Drawing.Point(0, 113);
-            this.pictureBoxDraw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxDraw.Location = new System.Drawing.Point(0, 92);
             this.pictureBoxDraw.Name = "pictureBoxDraw";
-            this.pictureBoxDraw.Size = new System.Drawing.Size(1067, 441);
+            this.pictureBoxDraw.Size = new System.Drawing.Size(800, 358);
             this.pictureBoxDraw.TabIndex = 1;
             this.pictureBoxDraw.TabStop = false;
             this.pictureBoxDraw.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             this.pictureBoxDraw.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBoxDraw.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(661, 69);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // FormLab
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBoxDraw);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormLab";
             this.Text = "Lab 01 Pedich";
             this.Load += new System.EventHandler(this.FormLab_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRadius)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarThickness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDraw)).EndInit();
@@ -280,7 +250,6 @@ namespace Lab01
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Button button1;
     }
 }

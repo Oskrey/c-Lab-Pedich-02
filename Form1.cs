@@ -34,12 +34,12 @@ namespace Lab01
             for(int i = list.Count - 1; i >= 0; i--)
             {
                 Figure fig = list[i];
-                
                 fig.selected |= fig.test(e.X, e.Y);
-                if   (fig.selected == true) break;
+                if (fig.selected == true) { listBox1.SelectedIndex = i; break; }
             }
             pictureBoxDraw.Invalidate();
         }
+        
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -59,17 +59,10 @@ namespace Lab01
             old_y = e.Y;
         }
 
-        private void buttonDelete_Click(object sender, EventArgs e)
-        {
-            int i = 0;
-            while (i< list.Count)
-            {
-                if (list[i].selected == true) list.RemoveAt(i);
-                i++;
-            }
-            pictureBoxDraw.Invalidate();
-        }
-
+        
+        int rectNum = 1;
+        int circNum = 1;
+        int triangNum = 1;
         private void button1_Click(object sender, EventArgs e)
         {
             Figure fig = createFigure(comboBoxFigure.Text);
@@ -81,10 +74,37 @@ namespace Lab01
             fig.pos_x = 100.0f;
             fig.pos_y = 100.0f;
             list.Add(fig);
+            switch (comboBoxFigure.Text)
+            {
+                case "Квадрат": listBox1.Items.Add(comboBoxFigure.Text + rectNum.ToString()); rectNum++; break;
+                case "Круг": listBox1.Items.Add(comboBoxFigure.Text + circNum.ToString()); circNum++; break;
+                case "Треугольник": listBox1.Items.Add(comboBoxFigure.Text + triangNum.ToString()); triangNum++; break;
+            }
+            
+            pictureBoxDraw.Invalidate();
+        }
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            while (i < list.Count)
+            {
+                if (list[i].selected == true) { list.RemoveAt(i); }  //listBox1.Items.RemoveAt(i);}
+                i++;
+            }
+            pictureBoxDraw.Invalidate();
+        }
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Figure fig in list)
+                fig.selected = false;
+            for (int i = list.Count - 1; i >= 0; i--)
+            {
+                Figure fig = list[Convert.ToInt32(listBox1.SelectedIndex)];
+                fig.selected = true;
+            }
             pictureBoxDraw.Invalidate();
         }
 
-        
 
         private void FormLab_Load(object sender, EventArgs e)
         {
@@ -179,6 +199,23 @@ namespace Lab01
             pictureBoxDraw.Invalidate();
         }
 
+        
+
+        
+
+        private void trackBarThickness_ValueChanged(object sender, EventArgs e)
+        {
+            foreach (Figure fig in list)
+            {
+                if (fig.selected == false) continue;
+                fig.thickness = trackBarThickness.Value;
+            }
+            pictureBoxDraw.Invalidate();
+        }
+
+
+
+
         private void buttonColour_Click(object sender, EventArgs e)
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
@@ -192,19 +229,5 @@ namespace Lab01
                 pictureBoxDraw.Invalidate();
             }
         }
-
-       
-
-        private void trackBarThickness_ValueChanged(object sender, EventArgs e)
-        {
-            foreach (Figure fig in list)
-            {
-                if (fig.selected == false) continue;
-                fig.thickness = trackBarThickness.Value;
-            }
-            pictureBoxDraw.Invalidate();
-        }
-
-        
     }
 }

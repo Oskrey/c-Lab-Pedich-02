@@ -30,7 +30,7 @@ namespace Lab01
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.buttonColour = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@ namespace Lab01
             // 
             // panelMenu
             // 
-            this.panelMenu.Controls.Add(this.button1);
+            this.panelMenu.Controls.Add(this.listBox1);
             this.panelMenu.Controls.Add(this.buttonColour);
             this.panelMenu.Controls.Add(this.label3);
             this.panelMenu.Controls.Add(this.label4);
@@ -69,18 +69,17 @@ namespace Lab01
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(800, 92);
+            this.panelMenu.Size = new System.Drawing.Size(922, 114);
             this.panelMenu.TabIndex = 0;
             // 
-            // button1
+            // listBox1
             // 
-            this.button1.Location = new System.Drawing.Point(496, 56);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(773, 3);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(147, 108);
+            this.listBox1.TabIndex = 8;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // buttonColour
             // 
@@ -205,9 +204,9 @@ namespace Lab01
             // 
             this.pictureBoxDraw.BackColor = System.Drawing.Color.White;
             this.pictureBoxDraw.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxDraw.Location = new System.Drawing.Point(0, 92);
+            this.pictureBoxDraw.Location = new System.Drawing.Point(0, 114);
             this.pictureBoxDraw.Name = "pictureBoxDraw";
-            this.pictureBoxDraw.Size = new System.Drawing.Size(800, 358);
+            this.pictureBoxDraw.Size = new System.Drawing.Size(922, 336);
             this.pictureBoxDraw.TabIndex = 1;
             this.pictureBoxDraw.TabStop = false;
             this.pictureBoxDraw.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -218,7 +217,7 @@ namespace Lab01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(922, 450);
             this.Controls.Add(this.pictureBoxDraw);
             this.Controls.Add(this.panelMenu);
             this.Name = "FormLab";
@@ -250,7 +249,7 @@ namespace Lab01
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

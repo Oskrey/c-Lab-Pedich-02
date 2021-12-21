@@ -69,7 +69,7 @@ namespace Lab01
             pictureBoxDraw.Invalidate();
         }
 
-        private void button1_Click(object sender, EventArgs e)//Чисто проверить
+        private void button1_Click(object sender, EventArgs e)
         {
             Figure fig = createFigure(comboBoxFigure.Text);
             fig.thickness = trackBarThickness.Value;

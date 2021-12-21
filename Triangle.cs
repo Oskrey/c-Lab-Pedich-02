@@ -16,21 +16,12 @@ namespace Lab01
         public PointF ptest = new PointF();
         public override bool test(float x, float y)
         {
-            float xmin = pos_x - size;
-            float ymin = pos_y - size;
-            float xmax = pos_x ;
-            float ymax = pos_y ;
-            if (x < xmin || y < ymin) return false;
-            if (x > xmax || y > ymax) return false;
-
+            
             return true;
         }
         public PointF[] p = new PointF[3];
         public override void draw(Graphics g)
         {
-
-
-
             p[0].X = pos_x;
             p[0].Y = pos_y;
 
@@ -59,16 +50,20 @@ namespace Lab01
 /*
             float yBmin = pos_y- (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2; //Для B
             float xBmin = pos_x;
+
             float yBmax = pos_y+(float)(((Math.Sqrt(3) / 2) * size) / 3);
             float xBmax = pos_x;/////////////////////////////////////////////////////////
 
+
             float yCmax = pos_y + (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2;// Для С
             float xCmax = pos_x + (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2;
+
             float yCmin = pos_y - (float)(((Math.Sqrt(3) / 2) * size) / 3);
             float xCmin = pos_x - (float)(((Math.Sqrt(3) / 2) * size) / 3);/////////////
 
             float yAmax = pos_y + (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2;// Для С
             float xAmax = pos_x - (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2;
+
             float yAmin = pos_y - (float)(((Math.Sqrt(3) / 2) * size) / 3);
             float xAmin = pos_x + (float)(((Math.Sqrt(3) / 2) * size) / 3);/////////////
 
@@ -76,6 +71,15 @@ namespace Lab01
             if  (x > xBmax || x > xCmax || x > xAmax || y > yBmax || y > yCmax || y > yAmax) return false;
             
 
+вот тут норм
+            p[0].X = pos_x;
+            p[0].Y = pos_y;
+
+            p[1].X = (float)(pos_x + size * -Math.Cos(0));
+            p[1].Y = (float)(pos_y + size * -Math.Sin(0));
+
+            p[2].X = (float)(pos_x + size * -Math.Cos(Math.PI / 3));
+            p[2].Y = (float)(pos_y + size * -Math.Sin(Math.PI / 3));
 
 
 
@@ -90,7 +94,15 @@ namespace Lab01
  
  
  
- 
+            весёлый бред
+            p[0].X = pos_y + (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2; 
+            p[0].Y = pos_x - (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2; 
+
+            p[1].X = pos_x;
+            p[1].Y = pos_y + (float)(((Math.Sqrt(3) / 2) * size) / 3);
+
+            p[2].X = pos_x + (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2;
+            p[2].Y = pos_y + (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2;
  
  
  

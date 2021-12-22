@@ -22,9 +22,10 @@ namespace Lab01
             float ymin = pos_y - size;
             float xmax = pos_x;
             float ymax = pos_y;
-            if (Math.Abs(x) > y / Math.Sqrt(3)) return false;
+            
             if (x < xmin || y < ymin) return false;
             if (x > xmax || y > ymax) return false;
+            //if (x + xmin > (y / Math.Sqrt(y)) + ymin) return false;
             return true;
         }
         public PointF[] p = new PointF[3];

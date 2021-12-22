@@ -88,7 +88,7 @@ namespace Lab01
             int i = 0;
             while (i < list.Count)
             {
-                if (list[i].selected == true) { list.RemoveAt(i); }  //listBox1.Items.RemoveAt(i);}
+                if (list[i].selected == true) { list.RemoveAt(i); listBox1.Items.RemoveAt(i);}
                 i++;
             }
             pictureBoxDraw.Invalidate();
@@ -99,8 +99,12 @@ namespace Lab01
                 fig.selected = false;
             for (int i = list.Count - 1; i >= 0; i--)
             {
-                Figure fig = list[Convert.ToInt32(listBox1.SelectedIndex)];
-                fig.selected = true;
+                try
+                {
+                    Figure fig = list[listBox1.SelectedIndex];
+                    fig.selected = true;
+                }catch
+                { }
             }
             pictureBoxDraw.Invalidate();
         }
@@ -123,11 +127,6 @@ namespace Lab01
             }
             return null;
         }
-
-
-
-
-
 
         private void PictureBoxDraw_MouseWheel(object sender, MouseEventArgs e)
         {

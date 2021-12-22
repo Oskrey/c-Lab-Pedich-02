@@ -11,7 +11,7 @@ namespace Lab01
     {
         float radius_Squared, diameter, size;
 
-        public Circle() // констуктор с инициализацией параметров класса
+        public Circle() 
         {
         }
         public override bool test(float x, float y)
@@ -36,6 +36,11 @@ namespace Lab01
              size = rad;
              diameter = rad * 2.0f;
              radius_Squared = rad * rad;
+        }
+        public override float sdf(Vec2 p)
+        {
+            
+            return (pos - p).len()- radius_Squared;
         }
 
     }

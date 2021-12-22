@@ -223,6 +223,7 @@ namespace Lab01
             this.buttonRender.TabIndex = 9;
             this.buttonRender.Text = "Нарисовать";
             this.buttonRender.UseVisualStyleBackColor = true;
+            this.buttonRender.Click += new System.EventHandler(this.buttonRender_Click);
             // 
             // FormLab
             // 
@@ -232,7 +233,7 @@ namespace Lab01
             this.Controls.Add(this.pictureBoxDraw);
             this.Controls.Add(this.panelMenu);
             this.Name = "FormLab";
-            this.Text = "Lab 01 Pedich";
+            this.Text = "Lab 02 Pedich";
             this.Load += new System.EventHandler(this.FormLab_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();

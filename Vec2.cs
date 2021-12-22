@@ -38,18 +38,22 @@ namespace Lab01
         {
             return new Vec2(a.x - b.x, a.y - b.y);
         }
+
         public static Vec2 operator -(Vec2 a, float b)
         {
             return new Vec2(a.x - b, a.y - b);
         }
+
         public static Vec2 operator *(Vec2 a, float b)
         {
             return new Vec2(a.x * b, a.y * b);
         }
+
         public float len()
         {
             return (float)Math.Sqrt(x * x + y * y);
         }
+
         public Vec2 abs()
         {
             float xa = (float)Math.Abs(x);

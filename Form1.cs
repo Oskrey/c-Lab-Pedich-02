@@ -109,10 +109,12 @@ namespace Lab01
             pictureBoxDraw.Invalidate();
         }
 
-
+        int w, h;
+        Bitmap bmp;
         private void FormLab_Load(object sender, EventArgs e)
         {
             pictureBoxDraw.MouseWheel += PictureBoxDraw_MouseWheel;
+             
         }
 
         
@@ -212,22 +214,43 @@ namespace Lab01
             pictureBoxDraw.Invalidate();
         }
 
-        /*                      Кнопка рендер для заполнения битмапа
-        void buttonRender_Click(object sender, EventArgs e)
+        //private void buttonRender_Click(object sender, EventArgs e)
+        //{
+        //    w = pictureBoxDraw.Width;
+        //    h = pictureBoxDraw.Height;
+        //     bmp = new Bitmap(w, h);
+        //    pictureBoxDraw.Image = bmp;
+        //    for (int y = 0; y < h; y++)
+        //    {
+        //        for (int x = 0; x < w; x++)
+        //        {
+        //            RGB c = new RGB();
+        //            foreach (Figure fig in list)
+        //                if (fig.test(x, y)) c = fig.clr;
+        //            bmp.SetPixel(x, y, c.getColor());
+        //        }
+        //    }
+        //    pictureBoxDraw.Invalidate();
+        //}
+        private void buttonRender_Click(object sender, EventArgs e)
         {
-            for(int y = 0; y < Handle; y++)
+            w = pictureBoxDraw.Width;
+            h = pictureBoxDraw.Height;
+            bmp = new Bitmap(w, h);
+            pictureBoxDraw.Image = bmp;
+            for (int y = 0; y < h; y++)
             {
-                for(int x = 0; x < w; x++)
+                for (int x = 0; x < w; x++)
                 {
                     RGB c = new RGB();
-                    foreach   (Figure fig in lst)
-                        if   (fig.test(x, y)) c = fig.clr;
+                    foreach (Figure fig in list)
+                        if (fig.test(x, y)) c = fig.clr;
                     bmp.SetPixel(x, y, c.getColor());
                 }
             }
             pictureBoxDraw.Invalidate();
         }
-        */
+
 
         private void buttonColour_Click(object sender, EventArgs e)
         {

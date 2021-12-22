@@ -16,6 +16,7 @@ namespace Lab01
             this.org = org;
             this.dir = dir;
         }
+
         public Vec2 pointAtDistance(float t)
         {
             return org + dir * t;

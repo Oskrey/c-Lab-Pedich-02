@@ -39,5 +39,14 @@ namespace Lab01
             size = sz;
             half_side = sz * 0.5f;
         }
+        public override float sdf(Vec2 p)
+        {
+            Vec2 d = (p - pos).abs() - half_side;
+
+            float inner_d = Math.Min(Math.Max(d.x, d.y), 0.0f);
+            float outer_d = d.max(0.0f).len();
+
+            return inner_d + outer_d;
+        }
     }
 }

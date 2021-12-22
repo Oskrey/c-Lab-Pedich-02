@@ -16,10 +16,13 @@ namespace Lab01
         public PointF ptest = new PointF();
         public override bool test(float x, float y)
         {
+
+            
             float xmin = pos_x - size;
             float ymin = pos_y - size;
             float xmax = pos_x;
             float ymax = pos_y;
+            if (Math.Abs(x) > y / Math.Sqrt(3)) return false;
             if (x < xmin || y < ymin) return false;
             if (x > xmax || y > ymax) return false;
             return true;

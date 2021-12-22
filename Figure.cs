@@ -29,6 +29,16 @@ namespace Lab01
         {
 
         }
+        /*    Определение минимального расстояния т объекта до точки
+        public override float sdf(Vec2 p)
+        {
+            Vec2 d = (p - pos).abs() - half_side;
 
+            float inner_d = Math.Min(Math.Max(d.x, d.y), 0.0f);
+            float outer_d = d.max(0.0f).len();
+
+            return inner_d + outer_d;
+        }
+        */
     }
 }

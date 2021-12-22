@@ -212,8 +212,22 @@ namespace Lab01
             pictureBoxDraw.Invalidate();
         }
 
-
-
+        /*                      Кнопка рендер для заполнения битмапа
+        void buttonRender_Click(object sender, EventArgs e)
+        {
+            for(int y = 0; y < Handle; y++)
+            {
+                for(int x = 0; x < w; x++)
+                {
+                    RGB c = new RGB();
+                    foreach   (Figure fig in lst)
+                        if   (fig.test(x, y)) c = fig.clr;
+                    bmp.SetPixel(x, y, c.getColor());
+                }
+            }
+            pictureBoxDraw.Invalidate();
+        }
+        */
 
         private void buttonColour_Click(object sender, EventArgs e)
         {

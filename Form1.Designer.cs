@@ -45,6 +45,7 @@ namespace Lab01
             this.buttonAdd = new System.Windows.Forms.Button();
             this.pictureBoxDraw = new System.Windows.Forms.PictureBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.buttonRender = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRadius)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarThickness)).BeginInit();
@@ -53,6 +54,7 @@ namespace Lab01
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.buttonRender);
             this.panelMenu.Controls.Add(this.listBox1);
             this.panelMenu.Controls.Add(this.buttonColour);
             this.panelMenu.Controls.Add(this.label3);
@@ -213,6 +215,15 @@ namespace Lab01
             this.pictureBoxDraw.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBoxDraw.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
+            // buttonRender
+            // 
+            this.buttonRender.Location = new System.Drawing.Point(455, 51);
+            this.buttonRender.Name = "buttonRender";
+            this.buttonRender.Size = new System.Drawing.Size(94, 23);
+            this.buttonRender.TabIndex = 9;
+            this.buttonRender.Text = "Нарисовать";
+            this.buttonRender.UseVisualStyleBackColor = true;
+            // 
             // FormLab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,6 +261,7 @@ namespace Lab01
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button buttonRender;
     }
 }
 

@@ -63,7 +63,7 @@ namespace Lab01
         int rectNum = 1;
         int circNum = 1;
         int triangNum = 1;
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonAdd_Click(object sender, EventArgs e)
         {
             Figure fig = createFigure(comboBoxFigure.Text);
             fig.thickness = trackBarThickness.Value;
@@ -71,8 +71,8 @@ namespace Lab01
 
             
             if (fig == null) return;
-            fig.pos_x = 100.0f;
-            fig.pos_y = 100.0f;
+            fig.pos_x = pictureBoxDraw.Width/2;
+            fig.pos_y = pictureBoxDraw.Height/2;
             list.Add(fig);
             switch (comboBoxFigure.Text)
             {

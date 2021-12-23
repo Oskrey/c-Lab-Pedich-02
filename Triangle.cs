@@ -48,7 +48,6 @@ namespace Lab01
 
             float inner_d = Math.Min(Math.Max(d.x, d.y), 0.0f);
             float outer_d = d.max(0.0f).len();
-
             return inner_d + outer_d;
         }
 

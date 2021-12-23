@@ -38,17 +38,14 @@ namespace Lab01
             this.g = g;
             this.b = b;
         }
-
         public static RGB operator +(RGB a, RGB b)
         {
             return new RGB(a.r + b.r, a.g + b.g, a.b + b.b);
         }
-
         public static RGB operator *(RGB a, float b)
         {
             return new RGB(a.r * b, a.g * b, a.b * b);
         }
-
         public Color getColor()
         {
             int cr = (int)(r * 255.0f);

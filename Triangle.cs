@@ -16,17 +16,13 @@ namespace Lab01
         public PointF ptest = new PointF();
         public override bool test(float x, float y)
         {
+            float a = (p[0].X - x) * (p[1].Y - p[0].Y) - (p[1].X - p[0].X) * (p[0].Y - y);
+            float b = (p[1].X - x) * (p[2].Y - p[1].Y) - (p[2].X - p[1].X) * (p[1].Y - y);
+            float c = (p[2].X - x) * (p[0].Y - p[2].Y) - (p[0].X - p[2].X) * (p[2].Y - y);
 
-            
-            float xmin = pos_x - size;
-            float ymin = pos_y - size;
-            float xmax = pos_x;
-            float ymax = pos_y;
-            
-            if (x < xmin || y < ymin) return false;
-            if (x > xmax || y > ymax) return false;
-            //if (x + xmin > (y / Math.Sqrt(y)) + ymin) return false;
-            return true;
+            if (a > 0 && b > 0 && c > 0) return true;
+            if (a < 0 && b < 0 && c < 0) return true;
+            else return false;
         }
         public PointF[] p = new PointF[3];
         public override void draw(Graphics g)
@@ -66,52 +62,7 @@ namespace Lab01
 
 
 /*
-            float yBmin = pos_y- (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2; //Для B
-            float xBmin = pos_x;
-
-            float yBmax = pos_y+(float)(((Math.Sqrt(3) / 2) * size) / 3);
-            float xBmax = pos_x;/////////////////////////////////////////////////////////
-
-
-            float yCmax = pos_y + (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2;// Для С
-            float xCmax = pos_x + (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2;
-
-            float yCmin = pos_y - (float)(((Math.Sqrt(3) / 2) * size) / 3);
-            float xCmin = pos_x - (float)(((Math.Sqrt(3) / 2) * size) / 3);/////////////
-
-            float yAmax = pos_y + (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2;// Для С
-            float xAmax = pos_x - (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2;
-
-            float yAmin = pos_y - (float)(((Math.Sqrt(3) / 2) * size) / 3);
-            float xAmin = pos_x + (float)(((Math.Sqrt(3) / 2) * size) / 3);/////////////
-
-            if  (x < xBmax || x < xCmin || x < xAmin || y < yBmin || y < yCmin || y < yAmin) return false;
-            if  (x > xBmax || x > xCmax || x > xAmax || y > yBmax || y > yCmax || y > yAmax) return false;
             
-
-вот тут норм
-            p[0].X = pos_x;
-            p[0].Y = pos_y;
-
-            p[1].X = (float)(pos_x + size * -Math.Cos(0));
-            p[1].Y = (float)(pos_y + size * -Math.Sin(0));
-
-            p[2].X = (float)(pos_x + size * -Math.Cos(Math.PI / 3));
-            p[2].Y = (float)(pos_y + size * -Math.Sin(Math.PI / 3));
-
-
-
-
-
-
-
-
-
-            
-
- 
- 
- 
             весёлый бред
             p[0].X = pos_y + (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2; 
             p[0].Y = pos_x - (float)(((Math.Sqrt(3) / 2) * size) / 3) * 2; 
